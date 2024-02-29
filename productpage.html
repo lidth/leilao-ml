@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <script>
+        window.addEventListener('scroll', function() {
+          var button = document.querySelector('button.btn-b3');
+          var triggerHeight = 1160; 
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+          if(scrollTop > triggerHeight) {
+            button.style.display = 'block'; 
+            button.style.opacity = 1; 
+          } else {
+            button.style.display = 'none'; 
+            button.style.opacity = 0; 
+          }
+        });
+
+        
+        function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  const offset = 100;
+  return (
+    rect.top < window.innerHeight - offset && rect.bottom >= 0
+  );
+}
+
+        function revealOnScroll() {
+        document.querySelectorAll('.b8-product, .b9-product, .b10-product').forEach(function(div) {
+            if (isInViewport(div) && !div.classList.contains('animation-slideInFromLeft')) {
+            div.classList.add('animation-slideInFromLeft');
+            }
+        });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        </script>
     <div class="background b1"></div>
     <div class="background b2">
             <button class="btn-b2 btn">FAZER MEU PEDIDO</button>

@@ -9,6 +9,52 @@
     font-family: Montserrat, sans-serif;
 }
 
+@keyframes pulse-animation {
+    0% {
+      transform: translateX(-50%) scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+      transform: translateX(-50%) scale(1.05);
+      box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translate(-150%, -60%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -60%);
+      opacity: 1;
+    }
+  }
+  
+.animation-slideInFromLeft {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  div.b8-product, div.b9-product, div.b10-product {
+    
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+
 div.background{
     background-size: cover;
     background-color: rgb(254,216,0);
@@ -49,6 +95,8 @@ button.btn-b2{
     background-color: #5deb41;
     box-shadow: rgb(0,0,0) 0px 1px 3px;
     border-radius: 14px;
+    animation: pulse-animation 2s infinite;
+    transform-origin: center;
 }
 
 div.b3{
@@ -64,6 +112,9 @@ button.btn-b3{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
+    display: none; 
+    opacity: 0; 
+    animation: fadeIn 2s ease forwards; 
 }
 
 div.b4{
