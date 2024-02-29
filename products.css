@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
     margin: 0px;
@@ -8,11 +9,180 @@
     font-family: Montserrat, sans-serif;
 }
 
+div.background{
+    background-size: cover;
+    background-color: rgb(254,216,0);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-color: rgb(0,79,255);
+    border-width: 0px;
+}
 
+div.b1{
+    background-image: url('assets/images/vers2/background/one.webp');
+    height: 742px;
+}
 
+div.b2{
+    position: relative;
+    height: 698px;
+    background-image: url('assets/images/vers2/background/two.png');
+}
 
-div.carrosel{
-    display: flex;
-    align-items: center;
-    
+button.btn{
+    font-family: 'Open Sans';
+    font-size: 20px;
+    z-index: 2;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    width: 300px;
+    padding: 15px;
+    color: white;
+}
+
+button.btn-b2{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    background-color: #5deb41;
+    box-shadow: rgb(0,0,0) 0px 1px 3px;
+    border-radius: 14px;
+}
+
+div.b3{
+    background-image: url('assets/images/vers2/background/tree.webp');
+    height: 735px;
+    position: relative;
+}
+
+button.btn-b3{
+    background-color: rgb(254, 216, 0);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+
+div.b4{
+    background-image: url('assets/images/vers2/background/for.webp');
+    height: 735px;
+    position: relative;
+}
+
+button.btn-b4{
+    background-color: rgb(254, 216, 0);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+
+div.b5{
+    height: 717px;
+    background-image: url('assets/images/vers2/background/five.webp');
+}
+
+div.b6{
+    background-image: url('assets/images/vers2/background/six.webp');
+    height: 736px;
+}
+
+div.b7{
+    background-image: url('assets/images/vers2/background/seven.webp');
+    height: 739px;
+    position: relative;
+}
+
+button.btn-b7{
+    background-color: rgb(254, 216, 0);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+
+div.b8{
+    border-top: 3px solid #004FFF;
+    height: 739px;
+    background-image: url('assets/images/vers2/background/eight.webp');
+    position: relative;
+}
+
+div.products{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 390px;
+    height: 604px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.btn-container{
+    height: 100%;
+    position: relative;
+    margin: auto;
+    width: 200px;
+}
+
+button.btn-products{
+    position: absolute;
+    left: 50%;
+    top: 73%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #5deb41;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+div.b8-product{
+    background-image: url('assets/images/vers2/produtos/pone.webp');
+}
+
+div.b9{
+    border-top: 3px solid #004FFF;
+    height: 739px;
+    background-image: url('assets/images/vers2/background/eight.webp');
+    position: relative;
+}
+
+div.b9-product{
+    background-image: url('assets/images/vers2/produtos/ptwo.webp');
+}
+
+div.b10{
+    height: 739px;
+    background-image: url('assets/images/vers2/background/eight.webp');
+    border-top: 3px solid #004FFF;
+    position: relative;
+}
+
+div.b10-product{
+    background-image: url('assets/images/vers2/produtos/ptree.webp');
+}
+
+div.b11{
+    background-image: url('assets/images/vers2/background/nine.webp');
+    height: 757px;
+}
+
+footer{
+    background-color: #0543B8;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid white;
+    padding: 20px;
+    font-weight: 500;
 }
