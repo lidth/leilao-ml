@@ -40,44 +40,67 @@
         }
 
         window.addEventListener('scroll', revealOnScroll);
+
+        document.addEventListener("DOMContentLoaded", function() {
+    var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+    if ("IntersectionObserver" in window) {
+        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundImage = entry.target.getAttribute("data-bg");
+                    lazyBackgroundObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackgroundObserver.observe(lazyBackground);
+        });
+    } else {
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackground.style.backgroundImage = lazyBackground.getAttribute("data-bg");
+        });
+    }
+});
         </script>
-    <div class="background b1"></div>
-    <div class="background b2">
+    <div class="background b1 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-91621c1579fe76d2f823fb8df1e9a0d9.png)"></div>
+    <div class="background b2 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-aa8f224a251db3003eea87baf63872bd.png)">
             <button class="btn-b2 btn">FAZER MEU PEDIDO</button>
     </div>
-    <div class="background b3">
+    <div class="background b3 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-6492f9de919e911de35163e02d076031.png)">
         <button class="btn-b3 btn">FAZER MEU PEDIDO</button>
     </div>
-    <div class="background b4">
+    <div class="background b4 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-95e4fbb9df095464d3a224abb92e27e9.png)">
         <button class="btn-b4 btn">COMPRAR AGORA</button>
     </div>
-    <div class="background b5"></div>
-    <div class="background b6"></div>
-    <div class="background b7">
+    <div class="background b5 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-80a36a60b98638c7bc1649de894f39d4.png)"></div>
+    <div class="background b6 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-b473bee0b2d15a02d831ac299d34f4d7.png)"></div>
+    <div class="background b7 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-28d2412ee71d325218d3dfc18213cafc.png)">
         <button class="btn-b7 btn">CONFIRA ABAIXO</button>
     </div>
-    <div class="background b8">
-        <div class="b8-product products">
+    <div class="background b8 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-b3b21eaf4ccfd1c33470856765052b14.png)">
+        <div class="b8-product products lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-7bc30baab6a2b3769df67ab92b7e54b8.png)">
             <div class="btn-container">
                 <button class="btn-products">COMPRAR AGORA</button>
             </div>
         </div>
     </div>
-    <div class="background b9">
-        <div class="b9-product products">
+    <div class="background b9 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-b3b21eaf4ccfd1c33470856765052b14.png)">
+        <div class="b9-product products lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-b1046cfc2246e34bd19aa56313ffe31d.png)">
             <div class="btn-container">
                 <button class="btn-products">COMPRAR AGORA</button>
             </div>
         </div>
     </div>
-    <div class="background b10">
-        <div class="b10-product products">
+    <div class="background b10 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-b3b21eaf4ccfd1c33470856765052b14.png)">
+        <div class="b10-product products lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-07df8daeb943980629f4d8c442276221.png)">
             <div class="btn-container">
                 <button class="btn-products">COMPRAR AGORA</button>
             </div>
         </div>
     </div>
-    <div class="background b11"></div>
+    <div class="background b11 lazy-background" data-bg="url(https://cdn.greatsoftwares.com.br/arquivos/paginas_editor/66737-f2db0458286e03c68bfb5223bd293937.png)"></div>
     <footer>
         <p>Copyright © 2024 - Todos os direitos reservados.</p>
         <p>Termos de Uso | Políticas de Privacidade | Políticas de Cookies</p>
